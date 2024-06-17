@@ -7,6 +7,9 @@ app.use(cors())
 app.use(express.json());
 const port = process.env.PORT || 3000;
 
+app.use("/", (req,res)=> {
+  res.send("Hola Mundo")
+})
 app.use("/api/auth/empresa", empresaAuth)
 
 app.listen(port, () => {
